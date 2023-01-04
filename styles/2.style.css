@@ -1,0 +1,87 @@
+@import url(./normalize.css);
+@import url(./reset.css);
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+.image-wrapper {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  background: wheat;
+  width: 800px;
+  height: 600px;
+  position: relative;
+  border-radius: 15px;
+}
+
+.image-wrapper img {
+  width: 90%;
+  height: 400px;
+  border-radius: 15px;
+}
+
+.image-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  position: absolute;
+  top: 30px;
+}
+
+.image-top span {
+  font-size: 20px;
+}
+
+.image-top button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+}
+
+/* .button-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  position: absolute;
+  top: 50%;
+} */
+
+.button-left, .button-right {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.button-left {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.button-right {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
+.image-wrapper.is-active {
+  display: flex;
+}
